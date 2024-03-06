@@ -1,0 +1,5 @@
+class_path: _4_models._4_1_sequence_based_models.data_formatting_block.SPD_from_EEG_data_reformatting.misc.LearnedAugmentationFinetuning.LearnedAugmentationFinetuning
+init_args:
+    unfreeze_at_epoch: 1
+    override_extractor_lr_with_value: null
+    divide_extractor_lr_by_value_if_not_overridden: 10.0

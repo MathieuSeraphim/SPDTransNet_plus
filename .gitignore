@@ -1,0 +1,16 @@
+/.idea/
+/venv/
+*__pycache__/
+/log*
+/lightning_logs*
+/db*
+/_2_data_preprocessing/_2_1_original_datasets/*
+!/_2_data_preprocessing/_2_1_original_datasets/test/
+!/_2_data_preprocessing/_2_1_original_datasets/_download_scripts/
+/_2_data_preprocessing/_2_2_data_extraction/*_extracted/
+/_2_data_preprocessing/_2_4_preprocessed_data/
+/_5_execution/_5_1_runs_analysis/output/
+/test_logs/
+/error_tensors/
+/tmp_vectorized_data*/
+/tmp/

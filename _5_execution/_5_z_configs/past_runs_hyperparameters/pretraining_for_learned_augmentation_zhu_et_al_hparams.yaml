@@ -1,0 +1,48 @@
+model:
+  class_path: _4_models._4_2_signal_feature_extractor_models.MultichannelWindowFeatureLearningPretraining.MultichannelWindowFeatureLearningPretraining
+  init_args:
+    loss_function_config_dict:
+      name: cross_entropy
+    class_labels_list:
+    - N3
+    - N2
+    - N1
+    - REM
+    - Awake
+    number_of_independent_channels: 7
+    number_of_parallel_channels: 8
+    signal_length: 7680
+    number_of_output_features: 30
+    output_feature_length: 3
+    learning_rate: 4.161084209831562e-05
+    non_default_inputs_kwargs: null
+    optimisation_config_dict:
+      optimizer:
+        class_path: torch.optim.Adam
+        extra_kwargs:
+          betas:
+          - 0.9
+          - 0.999
+          eps: 1.0e-07
+          weight_decay: 1.0e-05
+      scheduler:
+        class_path: torch.optim.lr_scheduler.ExponentialLR
+        extra_kwargs:
+          gamma: 0.94
+    extractor_model:
+      class_path: _4_models._4_2_signal_feature_extractor_models.extractor_model.zhu_et_al_feature_extractor.MultichannelWindowFeatureLearningModel.MultichannelWindowFeatureLearningModel
+    features_to_classification_block:
+      class_path: _4_models._4_2_signal_feature_extractor_models.features_to_classification_block.pretraining_feature_to_classification_block.MultichannelFeatureExtractorPretrainingBlock.MultichannelFeatureExtractorPretrainingBlock
+datamodule:
+  class_path: _3_data_management._3_2_data_modules.EEG_epochs.EEGEpochsDataModule.EEGEpochsDataModule
+  init_args:
+    dataset_config_file: EEG_epochs_MASS_dataset_PredicAlert_signals_config.yaml
+    batch_size: 32
+    cross_validation_fold_index: 11
+    signal_preprocessing_strategy: z_score_normalization
+    channel_wise_transformations_config_file: SPD_matrices_from_EEG_transformations_config.yaml
+    channel_wise_transformations_as_hyphenated_list: no_transformation-delta_band_filtering-theta_band_filtering-alpha_band_filtering-low_beta_band_filtering-high_beta_band_filtering-gamma_band_filtering
+    obligatory_token_covariance_estimator: cov
+    rebalance_training_set_by_oversampling: true
+    dataloader_num_workers: 5
+    random_seed: 42

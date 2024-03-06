@@ -1,0 +1,6 @@
+statistic_vectors_for_matrix_augmentation_as_hyphenated_list:
+  type: categorical
+  args: [ psd, mean, max_minus_min ]
+signal_preprocessing_strategy:
+  type: categorical
+  args: [ raw_signals, z_score_normalization ]

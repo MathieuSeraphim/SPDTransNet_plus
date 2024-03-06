@@ -1,0 +1,22 @@
+hparams_to_track_file: SPD_from_EEG_hparams.yaml
+best_run_stats_to_track_file: SPD_from_EEG_stats.yaml
+other_inputs:
+  monitor: mf1
+  test_output_name: hparam_research_learned_augmentation_IITNet_full_finetuning
+  log_folders_location: .
+  lightning_log_folder_name: lightning_logs_hparam_research_learned_augmentation_IITNet_full_finetuning
+  skip_runs_with_mf1_under_value: 0.5
+  run_on_test_set: true
+  rerun_on_validation_set: false
+  trainer_config_file: trainer_default_config_no_graph.yaml
+  trainer_config_modifications_as_dict:
+    logger_logs_folder_name: test_logs
+  override_batch_size_with_value: null
+  save_confusion_matrices: true
+  list_of_additional_operations:
+    - name: transition_probabilities_analysis
+      kwargs:
+        set_name: test
+  restart_at_run_name: null
+  ignore_prefix: null
+  no_logger: false

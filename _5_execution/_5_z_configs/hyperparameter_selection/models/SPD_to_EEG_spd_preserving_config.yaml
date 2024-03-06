@@ -1,0 +1,77 @@
+learning_rate:
+  type: loguniform
+  args: [1.e-6, 5.e-4]
+augmentation_factor:
+  type: loguniform
+  args: [0.1, 1.e3]
+number_of_intra_epoch_encoder_heads:
+  type: categorical
+  args: [3, 5, 9]
+number_of_intra_epoch_encoder_layers:
+  type: int
+  args: [4, 6]
+number_of_inter_epoch_encoder_heads:
+  type: categorical
+  args: [3, 5, 9]
+number_of_inter_epoch_encoder_layers:
+  type: int
+  args: [4, 6]
+fully_connected_intermediary_dimension:
+  type: categorical
+  args: [256, 512, 1024]
+matrix_multiplication_factor:
+  type: categorical
+  args:
+    - 1.
+    - 10.
+NESTED:
+  - item: name # loss_function_config_dict
+    path: loss_function_config_dict
+    type: categorical
+    args:
+      - cross_entropy
+      - cross_entropy_with_label_smoothing
+  - item: class_path  # optimizer class path
+    path: optimisation_config_dict/optimizer
+    type: categorical
+    args:
+      - torch.optim.Adam
+      - torch.optim.AdamW
+COMPLEX:
+  - item: scheduler
+    path_if_nested: optimisation_config_dict
+    args:
+      - class_path: torch.optim.lr_scheduler.ExponentialLR
+        extra_kwargs:
+          gamma: 0.94
+      - class_path: _4_models.pl_lr_scheduler.LinearWarmupCosineAnnealingLR
+        extra_kwargs:
+          warmup_epochs: 1
+          max_epochs: 10
+          warmup_start_lr: 1.e-7
+        extra_config:
+          interval:
+            step
+CONDITIONAL:
+  - item: warmup_start_lr
+    path_if_nested: optimisation_config_dict/scheduler/extra_kwargs
+    path_to_condition: optimisation_config_dict/scheduler/class_path
+    condition_value: _4_models.pl_lr_scheduler.LinearWarmupCosineAnnealingLR
+    type: loguniform
+    args: [ 1.e-8, 5.e-6 ]
+  - item: svd_singular_value_minimum
+    path_if_nested: null
+    path_to_condition: matrix_multiplication_factor
+    condition_value: 1.
+    type: categorical
+    args:
+      - 1.e-2
+      - null
+  - item: svd_singular_value_minimum
+    path_if_nested: null
+    path_to_condition: matrix_multiplication_factor
+    condition_value: 10.
+    type: categorical
+    args:
+      - 1.e-1
+      - null
