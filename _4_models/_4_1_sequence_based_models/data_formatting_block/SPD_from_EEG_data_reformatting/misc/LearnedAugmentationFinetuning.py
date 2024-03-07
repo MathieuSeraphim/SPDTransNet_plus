@@ -94,7 +94,7 @@ class LearnedAugmentationFinetuning(BaseFinetuning):
 
 if __name__ == "__main__":
     callback = LearnedAugmentationFinetuning()
-    model_config = "PredicAlert_signals_spd_preserving_network_learned_augmentation_length_21_config.yaml"
+    model_config = "EUSIPCO_signals_spd_preserving_network_learned_augmentation_length_21_config.yaml"
     model = get_model_from_config_file(model_config)
     model.setup("test")
     extractor = callback.get_extractor_model(model)

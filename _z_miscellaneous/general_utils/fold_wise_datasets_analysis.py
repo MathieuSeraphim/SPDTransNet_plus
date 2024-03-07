@@ -327,7 +327,7 @@ def save_stats_on_all_folds_for_dataset(dataset_name: str, datamodule_config_fil
 if __name__ == "__main__":
     parser = ArgumentParser()
 
-    # --dataset_name MASS_SS3 --datamodule_config_filename Vectorized_SPD_matrices_from_EEG_MASS_dataset_PredicAlert_signals_length_21_config.yaml --extra_epochs_on_each_side 10 --rebalancing_on_train --extra_clipping_on_test 24
+    # --dataset_name MASS_SS3 --datamodule_config_filename Vectorized_SPD_matrices_from_EEG_MASS_dataset_EUSIPCO_signals_length_21_config.yaml --extra_epochs_on_each_side 10 --rebalancing_on_train --extra_clipping_on_test 24
 
     parser.add_argument("--dataset_name", type=str, required=True)
     parser.add_argument("--datamodule_config_filename", type=str, required=True)

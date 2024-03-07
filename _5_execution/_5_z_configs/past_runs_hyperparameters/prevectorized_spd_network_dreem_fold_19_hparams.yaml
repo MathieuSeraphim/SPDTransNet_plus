@@ -10,7 +10,7 @@ datamodule:
     covariance_estimator: cov
     cross_validation_fold_index: 19
     dataloader_num_workers: 8
-    dataset_config_file: Vectorized_SPD_matrices_from_EEG_Dreem_dataset_PredicAlert_signals_config.yaml
+    dataset_config_file: Vectorized_SPD_matrices_from_EEG_Dreem_dataset_EUSIPCO_signals_config.yaml
     decomposition_operator: svd
     extra_epochs_on_each_side: 10
     get_epoch_eeg_signals: false

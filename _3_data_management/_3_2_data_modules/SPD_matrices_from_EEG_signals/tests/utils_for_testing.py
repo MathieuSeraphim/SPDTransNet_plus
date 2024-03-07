@@ -50,4 +50,4 @@ def get_epochs_for_recordings_in_preprocessed_dataset(preprocessed_dataset_name:
 
 
 if __name__ == "__main__":
-    print(get_epochs_for_recordings_in_preprocessed_dataset("MASS_SS3_dataset_with_PredicAlert_signals_config", list(range(62)), 0))
+    print(get_epochs_for_recordings_in_preprocessed_dataset("MASS_SS3_dataset_with_EUSIPCO_signals_config", list(range(62)), 0))

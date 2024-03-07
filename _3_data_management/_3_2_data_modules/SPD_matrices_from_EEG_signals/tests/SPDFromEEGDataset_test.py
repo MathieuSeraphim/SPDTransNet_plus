@@ -20,7 +20,7 @@ covariance_estimator = "cov"
 statistic_vectors_to_return_list = [["mean", "psd"], []]
 transfer_recording_wise_matrices = True
 data_reader_config_file = "SPD_matrices_from_EEG_config.yaml"
-preprocessed_dataset_name = "MASS_SS3_dataset_with_PredicAlert_signals_config"
+preprocessed_dataset_name = "MASS_SS3_dataset_with_EUSIPCO_signals_config"
 clip_recordings_by_amount_list = [None, 24]
 
 number_of_signals = len(eeg_signals)
@@ -69,7 +69,7 @@ for recording_indices, rebalance_set_by_oversampling in recording_indices_and_re
                     assert data_dict["recording mean statistic matrices"].shape == (number_of_channels, number_of_signals, len(statistic_vectors_to_return))
 
 
-dataset = get_dataset_from_config("SPD_matrices_from_EEG_MASS_dataset_PredicAlert_signals_config.yaml")
+dataset = get_dataset_from_config("SPD_matrices_from_EEG_MASS_dataset_EUSIPCO_signals_config.yaml")
 assert type(dataset) == SPDFromEEGDataset
 
 dataset.setup([10, 4], 10, signal_preprocessing_strategy, channel_wise_transformations, covariance_estimator, [],

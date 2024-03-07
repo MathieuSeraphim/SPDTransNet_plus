@@ -28,7 +28,7 @@ test_clipping_amount = 2 * recordings_per_test_set * max(0, (test_clipping - ext
 
 sequence_of_epochs_length = 2 * extra_epochs_on_each_side + 1
 
-dataset = get_dataset_from_config("SPD_matrices_from_EEG_MASS_dataset_PredicAlert_signals_config.yaml")
+dataset = get_dataset_from_config("SPD_matrices_from_EEG_MASS_dataset_EUSIPCO_signals_config.yaml")
 assert type(dataset) == SPDFromEEGDataset
 dataset.setup(recording_indices, extra_epochs_on_each_side, signal_preprocessing_strategy, channel_wise_transformations,
               covariance_estimator, statistic_vectors_for_matrix_augmentation, transfer_recording_wise_matrices)

@@ -6,7 +6,7 @@ from _5_execution.run_model import run_model_from_cli
 if __name__ == "__main__":
     parser = ArgumentParser()
 
-    # --execution_method standalone --execution_type test --global_seed 42 --trainer_config_file trainer_default_config.yaml --trainer_config.logger_version 65536 --model_config_file PredicAlert_signals_default_config.yaml --datamodule_config_file SPD_matrices_from_EEG_MASS_dataset_PredicAlert_signals_config.yaml --datamodule_config.cross_validation_fold_index 11
+    # --execution_method standalone --execution_type test --global_seed 42 --trainer_config_file trainer_default_config.yaml --trainer_config.logger_version 65536 --model_config_file EUSIPCO_signals_default_config.yaml --datamodule_config_file SPD_matrices_from_EEG_MASS_dataset_EUSIPCO_signals_config.yaml --datamodule_config.cross_validation_fold_index 11
 
     parser.add_argument("--execution_method", type=str, default="standalone")  # "standalone", "from_hparams" or "transfer_learning"
 

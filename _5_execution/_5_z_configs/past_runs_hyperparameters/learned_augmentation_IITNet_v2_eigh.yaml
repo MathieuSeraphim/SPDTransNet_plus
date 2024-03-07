@@ -60,7 +60,7 @@ model:
 datamodule:
   class_path: _3_data_management._3_2_data_modules.SPD_matrices_from_EEG_signals.SPDFromEEGDataModule.SPDFromEEGDataModule
   init_args:
-    dataset_config_file: EEG_epochs_and_corresponding_SPD_matrices_MASS_dataset_PredicAlert_signals_config.yaml
+    dataset_config_file: EEG_epochs_and_corresponding_SPD_matrices_MASS_dataset_EUSIPCO_signals_config.yaml
     batch_size: 4
     cross_validation_fold_index: 11
     extra_epochs_on_each_side: 10

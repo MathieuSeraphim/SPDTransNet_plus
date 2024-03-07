@@ -54,6 +54,6 @@ def pretty_print_recursive_exploration(recursive_exploration_output: Union[List,
 
 if __name__ == "__main__":
     # pass
-    # filename = "/home/seraphi211/pipeline/_2_data_preprocessing/_2_4_preprocessed_data/MASS_SS3_dataset_with_PredicAlert_signals_config/0001/epochs/0000_Awake.pkl"
+    # filename = "/home/seraphi211/pipeline/_2_data_preprocessing/_2_4_preprocessed_data/MASS_SS3_dataset_with_EUSIPCO_signals_config/0001/epochs/0000_Awake.pkl"
     filename = "/home/seraphi211/pipeline/_z_miscellaneous/standalone_tests/0000_Awake.pkl"
     pretty_print_recursive_exploration(recursive_exploration_from_pickle_file(filename))

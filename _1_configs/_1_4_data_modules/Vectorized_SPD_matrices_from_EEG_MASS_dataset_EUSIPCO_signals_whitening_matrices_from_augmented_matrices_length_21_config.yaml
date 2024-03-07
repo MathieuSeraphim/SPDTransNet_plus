@@ -1,6 +1,6 @@
 class_path: _3_data_management._3_2_data_modules.SPD_matrices_from_EEG_signals.VectorizedSPDFromEEGDataModule.VectorizedSPDFromEEGDataModule
 init_args:
-  dataset_config_file: Vectorized_SPD_matrices_from_EEG_Dreem_dataset_PredicAlert_signals_config.yaml
+  dataset_config_file: Vectorized_SPD_matrices_from_EEG_MASS_dataset_EUSIPCO_signals_whitening_matrices_from_augmented_matrices_config.yaml
   batch_size: 64
   cross_validation_fold_index: 11
   extra_epochs_on_each_side: 10

@@ -1,7 +1,7 @@
 model:
   class_path: _4_models._4_1_sequence_based_models.SPDFromEEGSuccessiveChannelsLearnedAugmentationWithRunningAverageTransformerModel.SPDFromEEGSuccessiveChannelsLearnedAugmentationWithRunningAverageTransformerModel
   init_args:
-    signals_datamodule_config_file: EEG_epochs_MASS_dataset_PredicAlert_signals_no_rebalancing_config.yaml
+    signals_datamodule_config_file: EEG_epochs_MASS_dataset_EUSIPCO_signals_no_rebalancing_config.yaml
     signals_batch_size: 4
     fold_index: 11
     loss_function_config_dict:
@@ -63,7 +63,7 @@ model:
 datamodule:
   class_path: _3_data_management._3_2_data_modules.SPD_matrices_from_EEG_signals.SPDFromEEGDataModule.SPDFromEEGDataModule
   init_args:
-    dataset_config_file: EEG_epochs_and_corresponding_SPD_matrices_MASS_dataset_PredicAlert_signals_config.yaml
+    dataset_config_file: EEG_epochs_and_corresponding_SPD_matrices_MASS_dataset_EUSIPCO_signals_config.yaml
     batch_size: 4
     cross_validation_fold_index: 11
     extra_epochs_on_each_side: 10

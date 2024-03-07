@@ -22,7 +22,7 @@ if __name__ == "__main__":
     parser.add_argument("--lightning_logs_folder_absolute_location", type=str, default=None)
     parser.add_argument("--lightning_logs_first_version_id", type=int, default=11)
     parser.add_argument("--lightning_logs_last_version_id", type=int, default=None)
-    parser.add_argument("--test_dataset_config_file", type=str, default="Vectorized_SPD_matrices_from_EEG_MASS_SS1_dataset_PredicAlert_signals_config.yaml")
+    parser.add_argument("--test_dataset_config_file", type=str, default="Vectorized_SPD_matrices_from_EEG_MASS_SS1_dataset_EUSIPCO_signals_config.yaml")
     parser.add_argument("--test_dataset_number_of_recordings", type=int, default=53)
     parser.add_argument("--test_dataset_force_multifile", action="store_true")
     parser.add_argument("--stats_to_track_file", type=str, default="SPD_from_EEG_stats.yaml")

@@ -2,8 +2,8 @@ wrapper:
   preprocessor:
     class_path: _2_data_preprocessing._2_3_preprocessors.SPD_matrices_from_EEG_signals.SPDFromEEGPreprocessor.SPDFromEEGPreprocessor
     init_args:
-      dataset_name: MASS_SS1
-      transformation_configuration_name: PredicAlert_signals
+      dataset_name: MASS_SS3
+      transformation_configuration_name: EUSIPCO_signals
     dict_kwargs:
       eeg_signals:
         - F3

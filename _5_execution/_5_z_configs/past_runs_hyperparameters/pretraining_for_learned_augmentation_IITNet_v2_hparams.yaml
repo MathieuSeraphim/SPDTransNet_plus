@@ -6,7 +6,7 @@ datamodule:
     channel_wise_transformations_config_file: SPD_matrices_from_EEG_transformations_config.yaml
     cross_validation_fold_index: 11
     dataloader_num_workers: 5
-    dataset_config_file: EEG_epochs_MASS_dataset_PredicAlert_signals_config.yaml
+    dataset_config_file: EEG_epochs_MASS_dataset_EUSIPCO_signals_config.yaml
     obligatory_token_covariance_estimator: cov
     random_seed: 42
     rebalance_training_set_by_oversampling: true

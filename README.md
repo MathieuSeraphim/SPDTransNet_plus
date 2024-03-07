@@ -1,4 +1,7 @@
-# SPDTransNet+
+<h1 style="text-align: center; margin-bottom: 0">Sleep Stage Classification using SPD Matrices</h1>
+<h2 style="text-align: center; margin-top: 0">through the Transformer-based, structure-preserving SPDTransNet model</h2>
+
+![The SPDTransNet architecture](./_z_miscellaneous/documentation/extras/model_architecture.png)
 
 Still a work in progress. Should be done by Match 8th, 2024 --- March 15th at the latest.
 

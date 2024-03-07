@@ -3,11 +3,11 @@ from _3_data_management._3_2_data_modules.SPD_matrices_from_EEG_signals.tests.ut
     get_epochs_for_recordings_in_preprocessed_dataset
 
 
-preprocessed_dataset_name = "MASS_SS3_dataset_with_PredicAlert_signals_config"
+preprocessed_dataset_name = "MASS_SS3_dataset_with_EUSIPCO_signals_config"
 non_test_clipping = 10
 test_clipping = 24
 
-datamodule = get_datamodule_from_config_file("SPD_matrices_from_EEG_MASS_dataset_PredicAlert_signals_config.yaml", batch_size=128, cross_validation_fold_index=0)
+datamodule = get_datamodule_from_config_file("SPD_matrices_from_EEG_MASS_dataset_EUSIPCO_signals_config.yaml", batch_size=128, cross_validation_fold_index=0)
 
 # Fold 0
 training = [0, 1, 3, 4, 5, 7, 8, 11, 12, 13, 14, 15, 17, 19, 20, 21, 22, 23, 24, 27,

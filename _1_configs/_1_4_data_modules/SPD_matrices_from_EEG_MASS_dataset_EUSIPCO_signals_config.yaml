@@ -1,6 +1,6 @@
-class_path: _3_data_management._3_2_data_modules.SPD_matrices_from_EEG_signals.VectorizedSPDFromEEGDataModule.VectorizedSPDFromEEGDataModule
+class_path: _3_data_management._3_2_data_modules.SPD_matrices_from_EEG_signals.SPDFromEEGDataModule.SPDFromEEGDataModule
 init_args:
-  dataset_config_file: Vectorized_SPD_matrices_from_EEG_MASS_dataset_PredicAlert_signals_whitening_first_config.yaml
+  dataset_config_file: SPD_matrices_from_EEG_MASS_dataset_EUSIPCO_signals_config.yaml
   batch_size: 64
   cross_validation_fold_index: 11
   extra_epochs_on_each_side: 10
@@ -16,8 +16,3 @@ init_args:
   use_recording_wise_simple_covariances: false
   no_covariances: false
   random_seed: 42
-  run_identifier: default
-  augmentation_factor: 1.
-  matrix_multiplication_factor: 1.
-  svd_singular_value_minimum: null
-  save_in_single_file: false

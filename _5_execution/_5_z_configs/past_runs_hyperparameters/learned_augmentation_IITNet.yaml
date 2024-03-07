@@ -8,7 +8,7 @@ datamodule:
     covariance_estimator: cov
     cross_validation_fold_index: 11
     dataloader_num_workers: 4
-    dataset_config_file: EEG_epochs_and_corresponding_SPD_matrices_MASS_dataset_PredicAlert_signals_config.yaml
+    dataset_config_file: EEG_epochs_and_corresponding_SPD_matrices_MASS_dataset_EUSIPCO_signals_config.yaml
     extra_epochs_on_each_side: 10
     get_epoch_eeg_signals: true
     no_covariances: false

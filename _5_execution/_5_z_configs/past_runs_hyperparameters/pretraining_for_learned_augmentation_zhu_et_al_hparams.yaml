@@ -36,7 +36,7 @@ model:
 datamodule:
   class_path: _3_data_management._3_2_data_modules.EEG_epochs.EEGEpochsDataModule.EEGEpochsDataModule
   init_args:
-    dataset_config_file: EEG_epochs_MASS_dataset_PredicAlert_signals_config.yaml
+    dataset_config_file: EEG_epochs_MASS_dataset_EUSIPCO_signals_config.yaml
     batch_size: 32
     cross_validation_fold_index: 11
     signal_preprocessing_strategy: z_score_normalization

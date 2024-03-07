@@ -93,6 +93,6 @@ if __name__ == "__main__":
     # csv_string = output_array_to_csv_string(output_array)
     # print(csv_string)
 
-    json_nested_dict_to_multicolumn_csv_file("stats_for_dataset_PredicAlert.json", "stats_for_dataset_PredicAlert.csv")
-    json_nested_dict_to_multicolumn_csv_file("stats_for_dataset_PredicAlert_as_percentages.json", "stats_for_dataset_PredicAlert_as_percentages.csv")
+    json_nested_dict_to_multicolumn_csv_file("stats_for_dataset_EUSIPCO.json", "stats_for_dataset_EUSIPCO.csv")
+    json_nested_dict_to_multicolumn_csv_file("stats_for_dataset_EUSIPCO_as_percentages.json", "stats_for_dataset_EUSIPCO_as_percentages.csv")
 
