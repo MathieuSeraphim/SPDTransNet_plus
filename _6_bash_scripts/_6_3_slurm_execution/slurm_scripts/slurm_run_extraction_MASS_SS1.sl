@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# An example Slurm submission file to apply the preprocessing to the extracted MASS SS3 dataset
+# An example Slurm submission file to extract the MASS SS3 dataset
 # Made for the French national supercomputer Jean Zay
 
 # Account used (may be removed in some circumstances)
 #SBATCH -A wpd@v100
 
 # Job name
-#SBATCH -J "preprocessing_MASS_SS3"
+#SBATCH -J "run_extraction_MASS_SS1"
 
 # Job output and error files
 # Repeating the %a (array ID) at the beginning for better alphabetical file sorting
@@ -20,14 +20,14 @@
 #SBATCH --gres gpu:1
 
 # Job time (hh:mm:ss)
-#SBATCH --time 10:00:00
+#SBATCH --time 20:00:00
 
 #SBATCH --mail-type ALL
 # User e-mail address
 # #SBATCH --mail-user your@address.here
 
 # Single job, choose an ID that doesn't clash with running jobs
-#SBATCH --array=2048
+#SBATCH --array=1024
 #SBATCH --mail-type=ARRAY_TASKS
 
 # Loading execution environment
@@ -37,7 +37,5 @@ PATH=$PATH:~/.local/bin
 export PATH
 
 set -x
-srun python -u run_preprocessing.py SPD_matrices_from_EEG_MASS_SS3_dataset_EUSIPCO_signals_config.yaml
-
-
+srun python -u run_extraction.py MASS_SS1
 

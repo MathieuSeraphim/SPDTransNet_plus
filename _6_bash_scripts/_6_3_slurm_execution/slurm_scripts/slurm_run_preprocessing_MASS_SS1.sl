@@ -7,7 +7,7 @@
 #SBATCH -A wpd@v100
 
 # Job name
-#SBATCH -J "preprocessing_MASS_SS3"
+#SBATCH -J "preprocessing_MASS_SS1"
 
 # Job output and error files
 # Repeating the %a (array ID) at the beginning for better alphabetical file sorting
@@ -37,7 +37,7 @@ PATH=$PATH:~/.local/bin
 export PATH
 
 set -x
-srun python -u run_preprocessing.py SPD_matrices_from_EEG_MASS_SS3_dataset_EUSIPCO_signals_config.yaml
+srun python -u run_preprocessing.py SPD_matrices_from_EEG_MASS_SS1_dataset_EUSIPCO_signals_config.yaml
 
 
 
