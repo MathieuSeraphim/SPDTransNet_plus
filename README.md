@@ -7,10 +7,10 @@ This repository is the official implementation of the SPDTransNet model, as pres
 ***Automatic Classification of Sleep Stages from EEG Signals Using Riemannian Metrics and Transformer Networks***
 by [Mathieu Seraphim](https://orcid.org/0000-0002-9367-1190), [Alexis Lechervy](https://orcid.org/0000-0002-9441-0187),
 [Florian Yger](https://orcid.org/0000-0002-7182-8062), [Luc Brun](https://orcid.org/0000-0002-1658-0527)
-and [Olivier Etard](https://orcid.org/0000-0003-3661-0233) - currently under review.
+and [Olivier Etard](https://orcid.org/0000-0003-3661-0233) -  official Version on Record [here](https://doi.org/10.1007/s42979-024-03310-5).
 
 It is a follow-up to our paper ***Structure-Preserving Transformers for Sequences of SPD Matrices*** - available
-on [arXiv](https://arxiv.org/pdf/2309.07579.pdf), in which we first presented our **SPDTransNet** model.
+on [arXiv](https://arxiv.org/pdf/2309.07579.pdf), in which we first presented our **[SPDTransNet](https://github.com/MathieuSeraphim/SPDTransNet)** model.
 
 **Important:** the implementation found in this repository builds upon the code found in
 [the first SPDTransNet repository](https://github.com/MathieuSeraphim/SPDTransNet).
